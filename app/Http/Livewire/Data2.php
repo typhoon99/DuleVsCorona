@@ -16,36 +16,36 @@ class Data2 extends Component
         'weight' => 'required|max:30|string',
         'height' => 'required|max:30|string',
         'is_physically_challenged' => 'required',
-        'medicine' => 'nullable|string|max:50',
-        'allergy' => 'nullable|string|max:50',
-        'insulin' => 'nullable|string|max:50',
+        'medicine' => 'nullable|string|max:100',
+        'allergy' => 'nullable|string|max:100',
+        'insulin' => 'nullable|string|max:100',
         'age' => 'required|integer|between:1,100',
-        'gender' => 'required|string|max:50',
-        'temp' => 'required|string|max:50',
+        'gender' => 'required|string|max:100',
+        'temp' => 'required|string|max:100',
         'symptoms_details' => 'nullable|string|max:200',
         'symptoms_condition' => 'required|string',
         ]);
         $this->emit('validatedas');
     }
-    public function updated($field)
-    {
-        $this->validateOnly($field, [
-        'blood_group' => 'required|max:100|string',
-        'disease_history' => 'nullable|max:100|string',
-        'operative_history' => 'nullable|max:100|string',
-        'weight' => 'required|max:30|string',
-        'height' => 'required|max:30|string',
-        'is_physically_challenged' => 'required',
-        'medicine' => 'nullable|string|max:50',
-        'allergy' => 'nullable|string|max:50',
-        'insulin' => 'nullable|string|max:50',
-        'age' => 'required|integer|between:1,100',
-        'gender' => 'required|string|max:50',
-        'temp' => 'required|string|max:50',
-        'symptoms_details' => 'nullable|string|max:200',
-        'symptoms_condition' => 'required|string',
-        ]);
-    }
+    // public function updated($field)
+    // {
+    //     $this->validateOnly($field, [
+    //     'blood_group' => 'required|max:100|string',
+    //     'disease_history' => 'nullable|max:100|string',
+    //     'operative_history' => 'nullable|max:100|string',
+    //     'weight' => 'required|max:30|string',
+    //     'height' => 'required|max:30|string',
+    //     'is_physically_challenged' => 'required',
+    //     'medicine' => 'nullable|string|max:100',
+    //     'allergy' => 'nullable|string|max:100',
+    //     'insulin' => 'nullable|string|max:100',
+    //     'age' => 'required|integer|between:1,100',
+    //     'gender' => 'required|string|max:100',
+    //     'temp' => 'required|string|max:100',
+    //     'symptoms_details' => 'nullable|string|max:200',
+    //     'symptoms_condition' => 'required|string',
+    //     ]);
+    // }
 
     public function render()
     {
